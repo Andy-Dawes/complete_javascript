@@ -1,40 +1,18 @@
-// // Variables
-// const defaultResult = 0;
-// let currentResult = defaultResult;
+// Variables
+const defaultResult = 0;
+let currentResult = defaultResult;
 
-// // Function
+// Function
 
-// function add() {
-//   currentResult = currentResult + userInput.value;
-//   outputResult(currentResult, "");
-// }
-
-// // currentResult = add(1, 2);
-// // let calculationDescription = "(${defaultResult} + 10) * 3 / 2 - 1";
-
-// addBtn.addEventListener("click", add);
-
-// Assignment - Functions
-
-// 1:
-
-const task3Element = document.getElementByID("task-3");
-
-function dad() {
-  alert("This is an alert about my Dad");
+function add() {
+    const enterNumber = parseInt(userInput.value);
+    const calcDescription = '${currentResult} + ${enteredNumber}';
+    currentResult = currentResult + enteredNumber;
+    outputResult(currentResult, calcDescription);
 }
 
-function mum(name) {
-  alert("Hi " + name);
-}
+// currentResult = add(1, 2);
+// let calculationDescription = "(${defaultResult} + 10) * 3 / 2 - 1";
 
-task3Element.addEventListener("click", dad);
-mum("Wynne");
+addBtn.addEventListener("click", add);
 
-function stringSentence(first, second, third) {
-  const combinedText = "${first} ${second} ${third}";
-  return combinedText;
-}
-
-const combinedString = combine("This is " + "my sentence " + "for the test.");
-alert(combinedString);
