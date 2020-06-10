@@ -30,6 +30,17 @@ function writeToLog(
 }
 
 function calculateResult(calculationType) {
+  // check if calculationType is not ADD, SUBTRACT, MULTIPLY, or DIVIDE
+  if (
+    calculationType !== "ADD" &&
+    calculationType !== "SUBTRACT" &&
+    calculationType !== "MULTIPLY" &&
+    calculationType !== "DIVIDE"
+  ) {
+    // If calculationType is not +, -, * or / then return and do not run rest of function
+    return;
+  }
+  // if calculationType is one of +, -, * or / then run rest of function
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
 
