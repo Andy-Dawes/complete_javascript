@@ -37,7 +37,7 @@ function calculateResult(calculationType) {
     calculationType !== "MULTIPLY" &&
     calculationType !== "DIVIDE"
   ) {
-    // If calculationType is not +, -, * or / then return and do not run rest of function
+    // if calculationType is not +, -, * or / then return and do not run rest of function
     return;
   }
   // if calculationType is one of +, -, * or / then run rest of function
