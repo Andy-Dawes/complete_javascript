@@ -42,7 +42,6 @@ function endRound() {
     }
 }
 
-resetGame();
 function attackMonster(mode) {
     let maxDamage;
     if (mode === "ATTACK") {
