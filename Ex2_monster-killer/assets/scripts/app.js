@@ -219,7 +219,24 @@ function printLogHandler() {
     for (let i = 0; i < 3; i++) {
         console.log("---------------------");
     }
-    console.log(battleLog);
+    // standard 'for' loop
+    // for (let i = 0; i < battleLog.length; i++) {
+    //     console.log(battleLog[i]);
+
+    // 'for-of' loop for arrays
+    // for (const logEntry of battleLog) {
+    //         console.log(logEntry);
+    //     }
+
+    // 'for-in' loop for objects
+
+    let i = 0;
+    for (const logEntry of battleLog) {
+        console.log("#${i}");
+        for (const key in logEntry) {
+            console.log(key);
+        }
+    }
 }
 
 attackBtn.addEventListener("click", attackHandler);
