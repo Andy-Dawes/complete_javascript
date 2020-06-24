@@ -250,13 +250,19 @@ function printLogHandler() {
 
     let i = 0;
     for (const logEntry of battleLog) {
-        console.log("#${i}");
-        for (const key in logEntry) {
-            console.log(key);
-            console.log(key[key]);
+        if (
+            (!lastLoggedEntry && lastLoggedEntry !== 0) ||
+            lastLoggedEntry < i
+        ) {
+            console.log("#${i}");
+            for (const key in logEntry) {
+                console.log(key);
+                console.log(key[key]);
+            }
+            lastLoggedEntry = i;
+            break;
         }
         i++;
-        break;
     }
 }
 
