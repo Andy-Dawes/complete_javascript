@@ -1,3 +1,5 @@
+'use strict';
+
 const ATTACK_VALUE = 11;
 const STRONG_ATTACK_VALUE = 17;
 const MONSTER_ATTACK_VALUE = 14;
