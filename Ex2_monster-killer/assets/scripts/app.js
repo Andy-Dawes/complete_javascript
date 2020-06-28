@@ -1,3 +1,4 @@
+const WIBBLE_WIBBLE_WIBBLE = 0;
 
 const ATTACK_VALUE = 11;
 const STRONG_ATTACK_VALUE = 17;
