@@ -18,7 +18,18 @@ const getPlayerChoice = function () {
         return DEFAULT_USER_CHOICE;
     }
     return selection;
-}
+};
+
+const getComputerchoice = function () {
+    const randomValue = Math.random();
+    if (randomValue < 0.34) {
+        return ROCK;
+    } else if (randomValue < 0.67) {
+        return PAPER;
+    } else {
+        return SCISSORS;
+    }
+};
 
 startGameBtn.addEventListener("click", function startGame() {
     if (gameIsRunning) {
@@ -27,5 +38,5 @@ startGameBtn.addEventListener("click", function startGame() {
     gameIsRunning = true;
     console.log("The game is starting!");
     const playerSelection = getPlayerChoice();
-    console.log(playerSelection);
+    const computerChoice = getComputerChoice();
 });
