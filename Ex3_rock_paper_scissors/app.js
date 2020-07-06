@@ -12,7 +12,7 @@ let gameIsRunning = false;
 
 const getPlayerChoice = () => {
     const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, ' ').toUpperCase();
-    if (
+   if (
         selection !== 'ROCK' &&
         selection !== 'PAPER' &&
         selection !== 'SCISSORS'
