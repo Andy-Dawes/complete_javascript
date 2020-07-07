@@ -12,7 +12,7 @@ let gameIsRunning = false;
 
 const getPlayerChoice = () => {
     const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, ' ').toUpperCase();
-   if (
+    if (
         selection !== 'ROCK' &&
         selection !== 'PAPER' &&
         selection !== 'SCISSORS'
@@ -66,4 +66,15 @@ startGameBtn.addEventListener("click", () => {
     const computerChoice = getComputerChoice();
     const winner = getWinner(computerChoice, playerChoice);
     console.log(winner);
+
+    let message;
+    if (winner === RESULT_DRAW) {
+        message = `You picked ${playerChoice} and the computer picked ${computerChoice}, therefore you have a draw!`;
+    } else if (winner === RESULT_PLAYER_WINS) {
+        message = `You picked ${playerChoice} and the computer picked ${computerChoice}, therefore you won!`;
+    } else {
+        message = `You picked ${playerChoice} and the computer picked ${computerChoice}, therfore you lose!`;
+    }
+    alert(message);
+    gameIsRunning = false;
 });
