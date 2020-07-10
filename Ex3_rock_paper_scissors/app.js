@@ -1,23 +1,28 @@
 const startGameBtn = document.getElementById("start-game-btn");
 
-const ROCK = 'ROCK';
-const PAPER = 'PAPER';
-const SCISSORS = 'SCISSORS';
+const ROCK = "ROCK";
+const PAPER = "PAPER";
+const SCISSORS = "SCISSORS";
 const DEFAULT_USER_CHOICE = ROCK;
-const RESULT_DRAW = 'DRAW';
-const RESULT_PLAYER_WINS = 'PLAYER_WINS';
-const RESULT_COMPUTER_WINS = 'COMPUTER_WINS';
+const RESULT_DRAW = "DRAW";
+const RESULT_PLAYER_WINS = "PLAYER_WINS";
+const RESULT_COMPUTER_WINS = "COMPUTER_WINS";
 
 let gameIsRunning = false;
 
 const getPlayerChoice = () => {
-    const selection = prompt(`${ROCK}, ${PAPER} or ${SCISSORS}?`, ' ').toUpperCase();
+    const selection = prompt(
+        `${ROCK}, ${PAPER} or ${SCISSORS}?`,
+        " "
+    ).toUpperCase();
     if (
-        selection !== 'ROCK' &&
-        selection !== 'PAPER' &&
-        selection !== 'SCISSORS'
+        selection !== "ROCK" &&
+        selection !== "PAPER" &&
+        selection !== "SCISSORS"
     ) {
-        alert(`You made an invalid choice. We chose ${DEFAULT_USER_CHOICE} for you`);
+        alert(
+            `You made an invalid choice. We chose ${DEFAULT_USER_CHOICE} for you`
+        );
         return DEFAULT_USER_CHOICE;
     }
     return selection;
@@ -35,13 +40,14 @@ const getComputerChoice = () => {
 };
 
 // Convert to an arrow function '=>'
-const getWinner = (cChoice, pChoice) => cChoice === pChoice ?
-    RESULT_DRAW :
-    (cChoice === ROCK && pChoice === PAPER) ||
-    (cChoice === PAPER && pChoice === SCISSORS) ||
-    (cChoice === SCISSORS && pChoice === ROCK) ?
-    RESULT_PLAYER_WINS :
-    RESULT_COMPUTER_WINS;
+const getWinner = (cChoice, pChoice) =>
+    cChoice === pChoice
+        ? RESULT_DRAW
+        : (cChoice === ROCK && pChoice === PAPER) ||
+          (cChoice === PAPER && pChoice === SCISSORS) ||
+          (cChoice === SCISSORS && pChoice === ROCK)
+            ? RESULT_PLAYER_WINS
+            : RESULT_COMPUTER_WINS;
 
 //     if (cChoice === pChoice) {
 //         return 'RESULT_DRAW';
