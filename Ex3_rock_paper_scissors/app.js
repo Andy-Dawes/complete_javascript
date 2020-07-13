@@ -1,3 +1,7 @@
+// ===========================================================
+// App.js
+// ===========================================================
+
 const startGameBtn = document.getElementById("start-game-btn");
 
 const ROCK = "ROCK";
@@ -34,13 +38,13 @@ const getComputerChoice = () => {
 };
 
 const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE) =>
-    cChoice === pChoice
-        ? RESULT_DRAW
-        : (cChoice === ROCK && pChoice === PAPER) ||
-          (cChoice === PAPER && pChoice === SCISSORS) ||
-          (cChoice === SCISSORS && pChoice === ROCK)
-            ? RESULT_PLAYER_WINS
-            : RESULT_COMPUTER_WINS;
+    cChoice === pChoice ?
+    RESULT_DRAW :
+    (cChoice === ROCK && pChoice === PAPER) ||
+    (cChoice === PAPER && pChoice === SCISSORS) ||
+    (cChoice === SCISSORS && pChoice === ROCK) ?
+    RESULT_PLAYER_WINS :
+    RESULT_COMPUTER_WINS;
 
 // if (cChoice === pChoice) {
 //   return RESULT_DRAW;
