@@ -1,4 +1,4 @@
-
+//
 const startGameBtn = document.getElementById("start-game-btn");
 
 const ROCK = "ROCK";
